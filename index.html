@@ -51,7 +51,7 @@
 <br>
         <form class="d-flex" style="padding-left: 16cm;">
             <input class="form-control" type="text" placeholder="Search..">
-            <button class="btn btn-warning" type="button">SEARCH</button>
+            <button class="btn btn-info" type="button">SEARCH</button>
         </form>
     </div>
     </div>
@@ -79,6 +79,50 @@
         <div class="col">
             <p>Ticket Type:</p>
         </div>
+
+        
+    <div class="container">
+        <form>
+
+            <center><label></label></center> <br>
+            <center><select class="form-select" id="ticket"></center>
+                <option value="none">Select</option>
+                <option value="25">Ticket (North Ave to Taft)</option>
+            </select> <br>
+
+
+            <br>
+
+            <center><label>Discount</label></center>  <br>
+            <select class="form-select" id="Discount">
+                <option value="none">Select</option>
+                <option value="0.2">PWD/SENIOR CITIZEN</option>
+                <option value="0.2">STUDENT</option>
+                <option value="0">REGULAR</option>
+            </select>
+
+            <br>
+            <br>
+
+            <button type="button" onclick="check_discount()"> Ticket Price </button>
+
+            <br>
+
+    </div>
+
+    <script>
+
+        function check_discount() {
+            var meal1 = document.getElementById('ticket').value;
+            var disc1 = document.getElementById('Discount').value;
+            var final_rate = meal1 - (disc1 * meal1);
+
+            window.alert('Your ticket price is ' + final_rate);
+        }
+
+    </script>
+
+    <br><br><br><br><br>
 
         <img class="img-route" src="Screenshot 2025-03-01 160559.png" alt="card" style="width: 9cm; height: 5cm;">
 
